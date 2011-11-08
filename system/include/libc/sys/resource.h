@@ -17,11 +17,13 @@ int getrusage(int who, struct rusage *r_usage);
 
 /* XXX Emscripten */
 #define RLIMIT_CPU 1
+#define	RLIMIT_STACK 2
 typedef unsigned rlim_t;
 struct rlimit {
   rlim_t rlim_cur;
   rlim_t rlim_max;
 };
+int getrlimit(int resource, struct rlimit *rlp);
 int setrlimit(int resource, const struct rlimit *rlim);
 
 #endif
