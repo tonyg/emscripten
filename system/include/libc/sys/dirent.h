@@ -14,6 +14,7 @@ struct dirent {
   char  d_name[MAXNAMLEN];
   int   d_off;
   int   d_reclen;
+  int   d_namlen;
   char  d_type;
 };
 

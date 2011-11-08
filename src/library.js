@@ -522,6 +522,7 @@ LibraryManager.library = {
       {{{ makeSetValue('entry', 'offsets.d_ino', 'inode', 'i32') }}}
       {{{ makeSetValue('entry', 'offsets.d_off', 'stream.position', 'i32') }}}
       {{{ makeSetValue('entry', 'offsets.d_reclen', 'name.length + 1', 'i32') }}}
+      {{{ makeSetValue('entry', 'offsets.d_namlen', 'name.length', 'i32') }}}
       for (var i = 0; i < name.length; i++) {
         {{{ makeSetValue('entry + offsets.d_name', 'i', 'name.charCodeAt(i)', 'i8') }}}
       }
